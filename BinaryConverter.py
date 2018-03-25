@@ -1,10 +1,7 @@
 from tkinter import Frame,Canvas  #include more tkinter widgets here
 
-
-
 from GreyScaleImage import GreyScaleImage
 from ColourImage import ColourImage
-
 
 ## GUI for binary image creator
 class BinaryConverter(Frame):
@@ -31,7 +28,8 @@ class BinaryConverter(Frame):
               [x,y,v]=pt    # x and y are both integers.
                             # v is a string, which comes from the output of _determineColorValue
               canvas.create_rectangle(s*x, s*y, s*(x+1), s*(y+1), fill=v, width=0)
- 
   
 if __name__ == "__main__":
     BinaryConverter().mainloop()
+
+BinaryConverter().mainloop()
