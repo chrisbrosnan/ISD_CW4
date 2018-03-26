@@ -1,16 +1,13 @@
 from tkinter import Frame,Canvas  #include more tkinter widgets here
-
-
-
+ 
 from GreyScaleImage import GreyScaleImage
 from ColourImage import ColourImage
-
 
 ## GUI for binary image creator
 class BinaryConverter(Frame):
     
     CANVAS_SIZE = 500  # Square Region size used to display images
-   
+    
     def __init__(self, master=None):
 
         Frame.__init__(self, master)
@@ -23,8 +20,6 @@ class BinaryConverter(Frame):
         self._processedData = None # Store here a BinaryImage object that is the result of binarising the loaded data.
         self._pixelSize = 2        # This is used to size the pixels in our display. See method _display()
 
-        
-
     def _display(self, canvas, inputPts): 
           s = self._pixelSize # renaming so that the last line of this method is shorter and easier to read
           for pt in inputPts:
@@ -32,6 +27,5 @@ class BinaryConverter(Frame):
                             # v is a string, which comes from the output of _determineColorValue
               canvas.create_rectangle(s*x, s*y, s*(x+1), s*(y+1), fill=v, width=0)
  
-  
 if __name__ == "__main__":
     BinaryConverter().mainloop()
