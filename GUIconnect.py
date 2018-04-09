@@ -5,6 +5,7 @@ class GUIconnect:
        #This method must return the mean of the intensity for the image
        #This value will need to be converted to an integer, use int(). 
        raise NotImplementedError('getThreshold must be implemented by subclass')
+
    
     def binariseImage(self, threshold):
         #Your "Process" Button should call this method.
